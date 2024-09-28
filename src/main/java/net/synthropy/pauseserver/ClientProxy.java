@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package net.synthropy.pauseserver;
 
 public class ClientProxy extends CommonProxy {
 
