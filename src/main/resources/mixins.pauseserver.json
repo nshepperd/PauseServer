@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "minVersion": "0.8.3-GTNH",
+    "refmap": "mixins.pauseserver.refmap.json",
+    "target": "@env(PREINIT)",
+    "compatibilityLevel": "JAVA_8",
+    "package": "net.synthropy.pauseserver.mixins",
+    "mixins": [
+      "PauseMixin"
+    ]
+  }

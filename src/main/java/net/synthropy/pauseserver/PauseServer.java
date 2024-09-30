@@ -10,7 +10,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = PauseServer.MODID, version = Tags.VERSION, name = "PauseServer", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(
+    modid = PauseServer.MODID,
+    version = Tags.VERSION,
+    name = "PauseServer",
+    acceptedMinecraftVersions = "[1.7.10]",
+    acceptableRemoteVersions = "*")
 public class PauseServer {
 
     public static final String MODID = "pauseserver";
