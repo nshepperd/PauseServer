@@ -13,6 +13,7 @@ public class PauseMixin {
     // Must be > 0 to allow time for some world setup and cleanup after people leave.
     // I don't know exactly how many ticks we need, which is concerning.
     private static final int TICKS_BEFORE_PAUSE = 200;
+    private static final int PAUSED_TICKS_PER_SECOND = 1;
 
     private static int ticksWithoutPlayers = 0;
     private static int ticksPaused = 0;
@@ -33,24 +34,22 @@ public class PauseMixin {
     @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
     private void tick(CallbackInfo ci) {
         CheckPlayers();
-        // if (tickCount >= 200) {
-        // if (ShouldPause()) {
-        // System.out.println("Server is paused!");
-        // } else {
-        // System.out.println("Server tick is happening!");
-        // }
-        // tickCount = 0;
-        // }
         if (ShouldPause()) {
-            ticksPaused++;
-            if (ticksPaused % 200 == 0) {
-                System.out.println("Server is paused!");
+            if (ticksPaused == 0) {
+                System.out.println("No players online, pausing server.");
+                if (PAUSED_TICKS_PER_SECOND > 0) {
+                    System.out.println("(Slowed to " + Math.round(100 * PAUSED_TICKS_PER_SECOND / 20) + "%)");
+                }
             }
-            MinecraftServer.getServer()
-                .func_147137_ag()
-                .networkTick();
-            ci.cancel();
-        } else {
+            if (ticksPaused % (20 / PAUSED_TICKS_PER_SECOND) > 0) {
+                MinecraftServer.getServer()
+                    .func_147137_ag()
+                    .networkTick();
+                ci.cancel();
+            }
+            ticksPaused++;
+        } else if (ticksPaused > 0) {
+            System.out.println("Unpausing.");
             ticksPaused = 0;
         }
     }
