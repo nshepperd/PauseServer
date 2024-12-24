@@ -13,12 +13,12 @@ public class CommandAFK extends CommandBase {
 
     @Override
     public String getCommandName() {
-        return "afk";
+        return "unpause";
     }
 
     @Override
     public String getCommandUsage(ICommandSender sender) {
-        return "afk <duration>";
+        return "unpause <duration>";
     }
 
     @Override
