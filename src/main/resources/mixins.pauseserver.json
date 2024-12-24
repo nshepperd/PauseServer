@@ -4,7 +4,7 @@
     "refmap": "mixins.pauseserver.refmap.json",
     "target": "@env(PREINIT)",
     "compatibilityLevel": "JAVA_8",
-    "package": "net.synthropy.pauseserver.mixins",
+    "package": "net.eepylomf.pauseserver.mixins",
     "mixins": [
       "PauseMixin"
     ]

@@ -1,4 +1,4 @@
-package net.synthropy.pauseserver;
+package net.eepylomf.pauseserver;
 
 import net.minecraft.server.MinecraftServer;
 

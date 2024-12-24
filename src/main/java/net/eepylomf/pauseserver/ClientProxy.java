@@ -1,4 +1,4 @@
-package net.synthropy.pauseserver;
+package net.eepylomf.pauseserver;
 
 public class ClientProxy extends CommonProxy {
 

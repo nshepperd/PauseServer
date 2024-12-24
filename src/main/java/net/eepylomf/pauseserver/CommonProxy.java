@@ -1,6 +1,6 @@
-package net.synthropy.pauseserver;
+package net.eepylomf.pauseserver;
 
-import net.synthropy.pauseserver.command.CommandAFK;
+import net.eepylomf.pauseserver.command.CommandAFK;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;

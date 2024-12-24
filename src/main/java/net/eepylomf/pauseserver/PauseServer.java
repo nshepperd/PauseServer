@@ -1,4 +1,4 @@
-package net.synthropy.pauseserver;
+package net.eepylomf.pauseserver;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,8 +22,8 @@ public class PauseServer {
     public static final Logger LOG = LogManager.getLogger(MODID);
 
     @SidedProxy(
-        clientSide = "net.synthropy.pauseserver.ClientProxy",
-        serverSide = "net.synthropy.pauseserver.CommonProxy")
+        clientSide = "net.eepylomf.pauseserver.ClientProxy",
+        serverSide = "net.eepylomf.pauseserver.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

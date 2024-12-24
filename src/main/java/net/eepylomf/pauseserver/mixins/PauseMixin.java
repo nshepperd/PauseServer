@@ -1,8 +1,8 @@
-package net.synthropy.pauseserver.mixins;
+package net.eepylomf.pauseserver.mixins;
 
+import net.eepylomf.pauseserver.PauseCountdown;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.dedicated.DedicatedServer;
-import net.synthropy.pauseserver.PauseCountdown;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

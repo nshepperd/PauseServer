@@ -1,13 +1,13 @@
-package net.synthropy.pauseserver.command;
+package net.eepylomf.pauseserver.command;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import net.eepylomf.pauseserver.PauseCountdown;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
 import net.minecraft.util.ChatComponentText;
-import net.synthropy.pauseserver.PauseCountdown;
 
 public class CommandAFK extends CommandBase {
 
