@@ -27,6 +27,11 @@ public class CommandAFK extends CommandBase {
     }
 
     @Override
+    public boolean canCommandSenderUseCommand(ICommandSender sender) {
+        return true;
+    }
+
+    @Override
     public void processCommand(ICommandSender sender, String[] args) {
         if (args.length == 0 || args.length > 1) {
             throw new WrongUsageException("Usage:" + getCommandUsage(sender));
